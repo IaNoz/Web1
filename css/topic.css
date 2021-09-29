@@ -1,0 +1,240 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 Nov 2020, 12:17:19
+    Author     : ian
+*/
+
+/*************  any blog topic page     ***********/
+
+/* topic  intro banner */
+:root{
+    --ENVIRONMENT_COLOR : #3f4a4a;
+    --FAUNA_COLOR : #6999ae;
+    --FLORA_COLOR : #91cdc2;
+    --FOOD_COLOR : #9b6b87;
+    --WORSHIP_COLOR : #c2868b;
+    --INDUSTRY_COLOR : #7f725d;
+    --TECHNOLOGY_COLOR : #ebbf8a;
+    --AWARENESS_COLOR : #ebcebf;
+    --BG_COLOR: var(--FAUNA_COLOR);
+}
+section.topic-intro{
+    display: block;
+    width: 100%;
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+#posts_preview{
+    padding: 2%;
+    width: 100%;
+    max-width: var(--max-w);
+    margin: 0 auto;
+
+    background-color: var(--lightpink);
+}
+#intro-ENVIRONMENT, #intro-MEDIOAMBIENTE{
+    --BG_COLOR: var(--ENVIRONMENT_COLOR);
+}
+#intro-FAUNA, #intro-FAUNAESP{
+    --BG_COLOR: var(--FAUNA_COLOR);
+}
+#intro-FLORA, #intro-FLORAESP{
+    --BG_COLOR: var(--FLORA_COLOR);
+}
+#intro-FOODNUTRITION, #intro-ALIMENTACIONYNUTRICION{
+    --BG_COLOR: var(--FOOD_COLOR);
+}
+#intro-WORSHIPBODYCARE, #intro-CULTODELCUERPO{
+    --BG_COLOR: var(--WORSHIP_COLOR);
+}
+#intro-INDUSTRY, #intro-INDUSTRIA{
+    --BG_COLOR: var(--INDUSTRY_COLOR);
+}
+#intro-TECHNOLOGYRENEWABLEENERGIES, #intro-TECNOLOGIAYENERGIASRENOVABLES{
+    --BG_COLOR: var(--TECHNOLOGY_COLOR);
+}
+#intro-AWARENESSMENTALHEALTH, #intro-CONCIENCIAYCALIDADMENTAL{
+    --BG_COLOR: var(--AWARENESS_COLOR);
+}
+.topic-intro-wrp{
+    background: var(--BG_COLOR);
+    width: 100%;
+    margin: 0 auto;
+    padding: 10em 6em;
+
+    position:relative;
+}
+.topic-intro-content{
+    height: 28em;
+    border: 1px solid var(--white);
+    padding: 2em;
+    color: var(--white);
+    position:relative;
+}
+#category-name h1{
+    margin: 0;
+    font-size: 3.5em;
+    color:var(--white);
+    font-weight: 100; 
+    padding: 0.5em;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--BG_COLOR);
+    z-index: 9;
+    border: 1px solid var(--white);
+    white-space: nowrap;
+}
+.topic-intro-content > .text{
+    width:100%;
+    /*border: 0.3em solid var(--white);*/
+    margin:0;
+    padding: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.topic-intro-content > .text > h1{
+    text-align:center;
+    /*margin:1em;*/
+    animation: 1s ease-out 0s 1 pear-fast-left;
+}
+  .topic-intro-content > .text > h2{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    animation: 1s ease-out 0s 1 pear-fast-left;
+/*        font-size: 3em;*/
+    margin:0;
+}
+  .topic-intro-content > .text > h3{
+    position: absolute;
+    top: 80%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    /*font-size: 3em;*/
+    margin:0;
+    animation: 1s ease-out 0s 1 pear-fast-left;
+    white-space: nowrap;
+}
+.topic-intro-content .text p{
+    animation: 1s ease-out 0s 1 ghost-appear;
+    text-align: center;
+    font-size: 2em;
+}
+  .topic-intro-content > .text > ul{
+      display: flex;
+      justify-content: space-evenly;
+/*          width: 30%;
+      margin: 0 auto;*/
+      font-size: 2em;
+}
+
+.as2logo{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -48%);
+    background: var(--BG_COLOR);
+    z-index: 9;
+}
+.skip-buttons{
+    font-size: 2em;
+    padding: 0.5em;
+    border-radius: 5%;
+    color:var(--white);
+    background: rgba(0,0,0, 0.2);
+}
+.skip-buttons:hover{
+    z-index: 10;
+    color:var(--white);
+    font-weight: 400;
+    background: rgba(0,0,0, 0.5);
+}
+.skip-buttons#prev{
+    position: absolute;
+    top: 50%;
+    left: -2%;
+    transform: translate(-50%, -50%);
+}
+.skip-buttons#next{
+    position: absolute;
+    top: 50%;
+    left: 102%;
+    transform: translate(-50%, -50%);
+}
+#slide-selector{
+    z-index: 99;
+    display: flex;
+    flex-wrap:nowrap;
+    gap:0.5em;
+
+    position: absolute;
+    top: 125%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#slide-selector .selec-btn{
+    width:1.5em;
+    height:1.5em;
+    padding: 0.5em;
+    border-radius: 100%;
+    background: rgba(0,0,0, 0.2);;
+}
+#slide-selector .selec-btn:hover{
+    background: rgba(0,0,0, 0.5);
+}
+#slide-selector .selected, #slide-selector .selected:hover{
+    background: rgba(225,225,225, 0.3);
+}
+@keyframes pear-fast-left {
+    0% {   margin-left: -100%;    opacity:0;}
+    100%{ margin-left: 0;           opacity: 1;}
+}
+@keyframes ghost-appear {
+    0% {      opacity:0;}
+    100%{            opacity: 1;}
+}
+
+/**************  posts list  ****************************/
+.def-main-grid#posts-preview{
+    --row_separation: 7;
+}
+.post-meta-data{
+    display: flex;
+    padding: 2em 0;
+}
+.post-meta-data > *{
+    font-weight:900;
+}
+#posts-preview .exp-img-wrp a{
+    display: inline-block;
+    width:100%;
+    height: 100%;
+}
+#posts-preview .exp-img-wrp img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 500px) {
+    .topic-intro-wrp{
+        padding: 5em 2em 10em 2em;
+    }
+    #category-name h1 {
+        font-size: 2.5em;
+    }
+    .topic-intro-content .text{
+        font-size: 0.8em;
+    }

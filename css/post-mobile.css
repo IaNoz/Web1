@@ -1,0 +1,14 @@
+@media only screen and (max-width: 600px) {
+#single-post.content-area{
+    width: 100%;
+    margin: 0 auto;
+}
+#post-body {
+    width: 90%;
+    margin: 0 auto;
+}
+#dyk-paragraph {
+    width: 110%;
+    margin: 10%  5% 10% -5%;
+}
+}

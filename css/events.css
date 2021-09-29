@@ -1,0 +1,10 @@
+/* 
+    Created on : 11 Nov 2020, 15:49:43
+    Author     : ian
+*/
+
+/*  single events  */
+.preview#events .def-main-grid{
+    --row_separation: 6;
+    background-color: var(--lightpink);
+}

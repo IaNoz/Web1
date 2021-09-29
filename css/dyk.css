@@ -1,0 +1,45 @@
+#did-you-know{
+        width: 90%;
+        max-width: 1400px;
+        margin: 0 auto;
+        height: 30vh;
+        background:var(--white);
+        position: relative;
+}
+#did-you-know > h1{
+    width: 100%;
+    font-style: italic;
+    margin-bottom: 0px;
+}
+/*    #did-you-know .phrase{
+    animation: 1s ease-out 0s 1 ghost-appear;
+    text-align:center;
+}*/
+#ph-wrp{
+    position: relative;
+    height: 15vh;
+}
+#ph-wrp > p{
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+    margin: 0; /* any margin at the left moves the content to right*/
+}
+.ph-hid-back{
+    opacity:0;
+    transition: 1s;
+}
+.ph-seen{
+    opacity:1;
+    transition: 1s;
+}
+
+@media only screen and (max-width: 500px) {
+    #ph-wrp{
+        position: relative;
+        height: 30vh;
+    }
+}

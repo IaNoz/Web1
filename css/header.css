@@ -1,0 +1,271 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10 Nov 2020, 13:36:13
+    Author     : ian
+*/
+
+/************  HEADER  **********************************/
+/* noBanner */
+
+/* apply when start scrolling down */
+html:not([data-scroll='0']) #top-menu-wrp,html:not([data-scroll='0']) #mb-top-menu-wrp{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+    position: fixed; /*stick menu to top of page*/
+}
+/**********     TOP-MENU    *************/
+#top-menu-wrp, #mb-top-menu-wrp, #top-logo-search-cart{  
+    top:0;  
+    width:100%;
+    z-index: 999; /*always on top*/
+    
+    background: white;
+}
+ #mb-top-menu-wrp{
+    min-height: 6em;
+ }
+#top-menu, #mb-top-menu {
+    margin: 0 auto; /* content of menu*/
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    list-style: none; /* don't shot list dots */
+}
+#top-logo-search-cart{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    font-size:1.5em;
+}
+#top-logo-search-cart > *{
+    align-self: center;
+}
+#mb-top-menu {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    list-style: none; /* don't shot list dots */
+    width: 100%;
+    font-size: 1.8em;
+}
+#mb-top-menu .menu-item{
+    /*border:2px solid black;*/
+    text-align: center;
+}
+#mb-top-menu .menu-item .sub-menu{
+    display:none;
+    list-style: none; /* don't shot list dots */
+    position: absolute;
+    top: 4em;
+    right: 0em;
+    z-index: 99999;
+    width: 180px;
+    background: #fff;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+}
+
+
+#mb-top-menu .menu-item:hover .sub-menu{
+    display:block;
+}
+#top-menu .menu-item{
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 1vw;
+    
+    text-align: center;
+}
+#top-menu .menu-item > a, #mb-top-menu .menu-item > a{
+    display: inline-block;
+    padding: 0.5em 0;
+}
+
+#mb-top-menu-wrp, #top-logo-search-cart{/*hide on PC screen*/
+    display:none;
+}
+
+
+/*--------- HOVERS ----------*/
+/*item hover & current page style*/
+#top-menu .hoverable:hover a, #mb-top-menu .hoverable.current_page_item > a{
+    text-decoration: none;
+    border-top: 0.2em solid var(--darkpink);
+    color: var(--darkpink);
+    text-shadow: 0 0 0.5px rgb(245,239,237);
+}
+
+/*------ EFFECTS ----------*/
+
+/* EFECTS - asignation */
+#top-menu-wrp, #mb-top-menu-wrp{
+    animation: 1s ease-out 0s 1 slow_apear_menu;
+}
+#top_menu .menu-item > a, #mb-top-menu .menu-item > a{
+    transition: 0.3s;
+}
+
+/* EFFECTS - definition */ 
+@keyframes slow_apear_menu{
+  0% {
+        transform: translateY(-100%);
+  }
+  100% {
+        transform: translateY(0%);
+  }
+}
+
+/*************************    PAGE BANNER STYLE    *************/
+#header-banner{
+    position: fixed;
+    /*next 3 center the fixed content horizontally and vertically*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+      /*prevents your fixed panel from being on top of your subsequent panels*/ 
+    z-index: -99;
+    display: block;
+    
+    text-align: center;
+}
+#header-banner > h1{
+    font-size: 15em;
+    color: var(--white);
+    font-weight: bolder;    
+    line-height: 1.5;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: 1.5;
+    font-style: normal;
+    typography_sensitivity: 1.3;
+}
+#header-banner > .slogan{
+    display: flex;
+    font-size: 2em;
+}
+#header-banner > .slogan .separator{
+    flex: 1 1 auto;
+    height: 0.6em;
+    flex-grow: 1;
+}
+#header-banner > .slogan .separator .line{
+    border-top: 1px solid var(--white); 
+    width: 100%;
+    display: inline-block;
+    margin: 0em 0 0.2em;
+}
+#header-banner > .slogan .frase{
+    color: var(--white);
+    flex: 0 1 200px;
+    white-space: nowrap;/*words separated by space wont wrap*/
+    display: inline-block;
+    padding: 0 3em;
+}
+
+/*---- BANNER EFFECTS --------------*/
+/* asignation */ 
+#header-banner h1{
+    animation: 1.5s ease-out 0s 1 slow_apear_onwards;
+}
+#header-banner > .slogan .separator .line{
+   animation: 3s ease-out 0s 1 slow_expand;
+}
+#header-banner > .slogan .frase{
+    animation: 2s ease-out 0s 1 slow_apear;
+}
+/* definitions */
+@keyframes slow_apear_onwards{
+  0% {
+    transform: translateY(30%);
+    opacity: 0;
+    font-size:8em;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    font-size:15em;
+  }
+}
+@keyframes slow_expand{
+  0% {
+    border-bottom: 0px solid white;
+    width: 0%;
+    font-size: 0;
+  }
+  50% {
+    border-bottom: 0px solid white;
+    width: 0%;
+  }
+  100% {
+    border-top: 1px solid white;
+    width: 100%;
+  }
+}
+@keyframes slow_apear{
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/*   ///////////////      MoBile      //////////////////*/
+
+@media only screen and (max-width: 900px) {
+    #top-menu-wrp{
+        display:none;
+    }
+    #mb-top-menu-wrp, #top-logo-search-cart{ 
+        display:grid;
+    }
+    #mb-logo{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        text-align: center;
+    }
+    #mb-search-bar-lens{
+        grid-column-start: 3;
+        grid-column-end: 6;
+    }
+    #mb-cart{
+        grid-column-start: 6;
+        text-align: center;
+    }
+    .header-banner h1{
+        font-size: 50em;   
+        transform: translate(0%,-50%);
+    }
+    #header-banner{
+        position: fixed;
+        top: 45%;
+        z-index: -99;
+        display: block;
+    }
+    #header-banner > .slogan{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    #header-banner > .slogan .separator{
+        flex: 0 1 auto;
+    }
+    #header-banner > .slogan .separator .line{ 
+       border-top: 1px solid white; 
+    }
+    #header-banner > .slogan .frase{
+        animation: 2s ease-out 0s 1 slow_apear;
+        flex: 0 1 auto;
+        margin: 0;
+        padding:0;
+        padding-top:0.5em;  
+    }
+}

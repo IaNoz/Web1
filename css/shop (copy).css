@@ -1,0 +1,208 @@
+/* 
+    Created on : 11 Nov 2020, 17:24:08
+    Author     : ian
+*/
+#shop{
+    background: var(--pink);
+}
+#shop-menu-grid{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100%;
+    --row_start: 1;
+    --row_separation: 6;
+    --row_end: 11;
+}
+
+.def-main-grid ul{
+    font-size: 1.5em;
+    padding:1.5em;
+}
+.def-main-grid li{
+    padding: 0.5em;
+}
+
+/* new shop  */
+/*  gradient separator  **/
+    .gr-separator{
+        height: 60em;
+        /*border: 2px solid black;*/
+    }
+    .default{
+        background: blue;
+    }
+    .gr-white-to-pink{
+        
+        background: rgba(255,255,255,1);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(227,205,192,1) 100%);
+    }
+    .gr-pink-to-white{
+        background: rgb(227,205,192);
+        background: linear-gradient(180deg, rgba(227,205,192,1) 0%, rgba(255,255,255,1) 100%);
+    }
+    /***********   background  ********************/
+    .collection-background{
+        width: 100%;
+        padding: 21em 5em;
+    }
+    .pink-background{
+        background:#e3cdc0;
+        
+    }
+    .white-background{
+        background:white;
+    }
+
+    /**********   shop intro banner  *****************/
+    #shop-intro-banner{
+        background-color: var(--pink);
+
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 100px;
+        padding: 1em;
+
+        text-align: center;
+
+    }
+    #shop-intro-banner > *{
+        text-align: center;
+    }
+    
+    /******    Image slider wrapper grid   *************/
+    .image-slider{
+        position:relative;
+        display:grid;
+        grid-template-columns: repeat(10,1fr);
+        grid-template-rows: repeat(10,1fr);
+        /*border:1px solid black;*/ 
+        width: 100%;
+        margin: 0 auto;
+    }
+    .pics-buttons{
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 9;
+        grid-row-end: 10;
+        z-index:10;
+    }
+    .pics-buttons button{
+        font-size:2em;
+        padding: 0 0.6em;
+        border-radius:10%;
+    }
+    .pics-buttons button:hover{
+        background:white;
+    }
+    #collection-intro{
+        grid-column-start: 7;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        grid-row-end: 7;
+        z-index:10;
+    }
+    .image-slider .background-image{
+        grid-column-start: 1;
+        grid-column-end: 8;
+        grid-row-start: 1;
+        grid-row-end: 11;
+        position:relative;
+        height:100vh;
+        /*border:1px solid red;*/
+    }
+    .image-slider .background-image img{
+        width:100%;
+        height: auto;
+        position:relative;
+    }
+    .products-preview{
+        width:100%;
+        grid-column-start: 5;
+        grid-column-end: 11;
+        grid-row-start: 9;
+        grid-row-end: 11;
+        position: absolute;
+    }
+
+    /**************** Priduct GRID *******************/
+    
+    .products-preview{
+        /*display:grid;*/
+        /*grid-template-columns: repeat(3,1fr);*/
+        display: flex;
+        flex-direction: row
+        width:90%;
+        margin:0 auto;
+        gap:3em;
+    }
+    ul.products-preview{
+        list-style-type: none;
+    }
+    .image-slider .products-preview .product{
+        border-radius:2%;
+        border: 1px solid lightgrey;
+        background: white;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    }
+    /**************** Product Image and options section *****/ 
+    .product .image-wrp{
+        position:relative;
+        overflow:hidden;
+        height: auto;
+    }
+    .product .image-wrp img{
+        width:100%;
+        /*height: auto;*/
+    }
+    .button-wrp a{
+        margin:0;
+        white-space: nowrap;
+        color: white;
+    }
+    
+    .product-options-wrp{
+        /*display:none;*/
+        width:100%;
+        height:100%;
+        position:absolute;
+        margin-left:100%;
+        background:rgb(198, 179, 165, 0.5);
+        font-size:1.4em;
+        font-weight:700;
+        text-shadow: 2px 2px 2px black;
+    }
+    .button-wrp{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        padding:40% 0;
+        width:100%;
+        text-align:center;
+    }
+
+    /***************  Product Info  *****************/
+    
+    .product .info{
+        display:flex;
+        flex-direction:column;
+        text-align:center;
+    }
+    .item-title h2, .price-wrp{
+        font-size:2em;
+        text-align:center;
+        color: #777461;
+        margin:0.5em;
+    }
+    .price-wrp{
+        display:none;
+    }
+    
+    
+/******* Hover Effect ***********/
+    .image-wrp:hover .product-options-wrp{
+        margin-left:0;
+        transition:0.3s;
+    }
+
+/* Mobile Style */
+@import "shop-mobile.css";

@@ -1,0 +1,24 @@
+/* 
+    Created on : 11 Nov 2020, 01:12:43
+    Author     : ian
+*/
+
+/* GRID */
+#blog-menu-grid{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 3em;
+    margin: 5% auto; /*avoid ite overflowing over previous and following blocks on hover effect of items*/
+    max-width: 1200px;
+}
+.topic{
+    height:20vw;
+}
+
+.topic img{
+    width:100%;
+    height: auto; /* fit image height to item-div height*/
+    object-fit: fill;/* image fills the block the height*/
+    transition-duration: 0.5s;
+}

@@ -1,0 +1,84 @@
+@media only screen and (max-width: 600px) {
+/******    Image slider wrapper grid   *************/
+
+.fade_motion_right_left{
+    -webkit-animation-name: fade_in_srink_center !important;
+    animation-name: fade_in_shrink_center !important;
+}
+    .collection-background{
+        padding: 2em 0em;
+    }
+    /**********   shop intro banner  *****************/
+    #shop-intro-banner{
+        width: 90%;
+    }
+    
+    /****************************************************/
+    .image-slider{
+        position:relative;
+        /*border:1px solid black;*/ 
+        width: 100%;
+        max-width: 1500px;
+        height: auto;
+        margin: 0 auto;
+    }
+    .pics-buttons{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        position: relative;
+        top: auto;
+        right: auto;
+
+        width:40%;
+        margin: 10vh auto;
+
+        z-index:10;
+    }
+    .pics-buttons button{
+        font-size:2em;
+        padding: 0 0.6em;
+        border-radius:10%;
+    }
+    .pics-buttons button:hover{
+        background:white;
+    }
+    #collection-intro{
+        position: relative;
+        /*top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);*/
+        width: 90%;
+        margin: 0 auto;
+
+        z-index:10;
+    }
+    #collection-intro h1{
+        font-size: 2em;
+    }
+    .image-slider .background-image{
+        position:relative;
+        left: 50%;
+        top: auto;
+        transform: translate(-50%,0);
+        width: 140%;
+        height: 45vh;
+        /*transform: scale(1.5, 1.5);*/
+        /*border:1px solid red;*/
+    }
+    .image-slider .background-image img{
+        height: auto;
+        position:relative;
+    }
+    .products-preview{
+        width:80%;
+        max-width: 200px;
+        position: relative;
+        bottom: auto;
+        right: auto;
+        flex-direction: column;
+    }
+    .gr-separator {
+        height: 30vh;
+    }
+}

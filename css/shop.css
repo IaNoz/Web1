@@ -1,0 +1,231 @@
+/* 
+    Created on : 11 Nov 2020, 17:24:08
+    Author     : ian
+*/
+
+
+
+#shop{
+    background: var(--pink);
+    overflow: hidden;
+}
+.preview#shop{
+    background-color: var(--white);
+}
+.preview#shop .def-main-grid{
+    background-color: var(--lightpink);
+}
+#shop-menu-grid{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100%;
+    --row_start: 1;
+    --row_separation: 6;
+    --row_end: 11;
+}
+
+
+.def-main-grid ul{
+    font-size: 1.5em;
+    padding:1.5em;
+}
+.def-main-grid li{
+    padding: 0.5em;
+}
+
+/* new shop  */
+/*  gradient separator  **/
+    .gr-separator{
+        height: 25vh;
+        /*border: 2px solid black;*/
+    }
+    .default{
+        background: blue;
+    }
+    .gr-white-to-pink{
+        
+        background: rgba(255,255,255,1);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(227,205,192,1) 100%);
+    }
+    .gr-pink-to-white{
+        background: rgb(227,205,192);
+        background: linear-gradient(180deg, rgba(227,205,192,1) 0%, rgba(255,255,255,1) 100%);
+    }
+    /***********   background  ********************/
+    .collection-background{
+        width: 100%;
+        padding: 2em 5em;
+    }
+    .pink-background{
+        background:#e3cdc0;
+        
+    }
+    .white-background{
+        background:white;
+    }
+
+    /**********   shop intro banner  *****************/
+    #shop-intro-banner{
+        background-color: var(--pink);
+
+        width: 100%;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 1em;
+    }
+    
+    #shop-intro-banner-text p{
+        text-align: center;
+    }
+    a#a-white{
+        color: var(--white);
+        font-weight: 900;
+    }
+    a#a-white:hover{
+        color: var(--brownygrey);
+    }
+    #shop-intro-banner-text h2{
+        text-align: center;
+    }
+    #shop-intro-img img:hover{
+        transform: scale(1);
+    }
+    
+    /******    Image slider wrapper grid   *************/
+    .image-slider{
+        position:relative;
+        /*border:1px solid black;*/ 
+        width: 100%;
+        max-width: 1500px;
+        min-height: 800px;
+        margin: 0 auto;
+    }
+    .pics-buttons{
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        z-index:10;
+    }
+    .pics-buttons button{
+        font-size:2em;
+        padding: 0 0.6em;
+        border-radius:10%;
+    }
+    .pics-buttons button:hover{
+        background:white;
+    }
+    #collection-intro{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        padding: 15px;
+        z-index:10;
+    }
+    #collection-intro:hover{
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+
+    }
+    .image-slider .background-image{
+        position:relative;
+        width: 80%;
+        /*border:1px solid red;*/
+    }
+    .image-slider .background-image img{
+        width:100%;
+        height: auto;
+        position:relative;
+        top: 0;
+        left: 0;
+    }
+    .products-preview{
+        width:60%;
+        position: absolute;
+        bottom: -0%;
+        right: 5%;
+    }
+
+    /**************** Priduct GRID *******************/
+    
+    .products-preview{
+        /*display:grid;*/
+        /*grid-template-columns: repeat(3,1fr);*/
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin:0 auto;
+        gap:3em;
+    }
+    ul.products-preview{
+        list-style-type: none;
+    }
+    .image-slider .products-preview .product{
+        flex: 0 0 200px;
+        border-radius:2%;
+        border: 1px solid lightgrey;
+        background: white;
+        box-shadow: 5px 5px 10px rgba(0 0 0 / 20%);
+    }
+    /**************** Product Image and options section *****/ 
+    .product .image-wrp{
+        position:relative;
+        overflow:hidden;
+        height: auto;
+    }
+    .product .image-wrp img{
+        width:100%;
+        /*height: auto;*/
+    }
+    .button-wrp a{
+        margin:0;
+        white-space: nowrap;
+        color: white;
+    }
+    
+    .product-options-wrp{
+        /*display:none;*/
+        width:100%;
+        height:100%;
+        position:absolute;
+        margin-left:100%;
+        background:rgb(198, 179, 165, 0.5);
+        font-size:1.4em;
+        font-weight:700;
+        text-shadow: 2px 2px 2px black;
+    }
+    .button-wrp{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        padding:40% 0;
+        width:100%;
+        text-align:center;
+    }
+
+    /***************  Product Info  *****************/
+    
+    .product .info{
+        display:flex;
+        flex-direction:column;
+        text-align:center;
+    }
+    .item-title h2, .price-wrp{
+        font-size:2em;
+        text-align:center;
+        color: #777461;
+        margin:0.5em;
+    }
+    .price-wrp{
+        display:none;
+    }
+    
+    
+/******* Hover Effect ***********/
+    .image-wrp:hover .product-options-wrp{
+        margin-left:0;
+        transition:0.3s;
+    }
+
+/* Mobile Style */

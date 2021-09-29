@@ -1,0 +1,55 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10 Nov 2020, 18:33:14
+    Author     : ian
+*/
+
+#manifesto-countdown{
+    margin: 0 auto;
+    width: 100%;
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+}
+#manifesto-countdown > *{
+    flex: 1 1 auto;
+    text-align: left;
+    color: #c6b3a5;
+}
+#manifesto-countdown h1{
+    margin: 0;
+}
+#countdown{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0em 4em;
+    white-space:nowrap;
+}
+#countdown > *{
+    flex: 0 1 1em;
+    text-align: center;
+    padding: 0.5vw 2vw;
+    margin: 1vw;
+    border-radius: 5px;
+    color: #fff;
+    background: #454a4c;
+    font-size: 1.5em;
+}
+#manifesto .def-main-grid{
+    --row_separation: 7;
+}
+.preview#manifesto .def-main-grid{
+    --row_separation: 5;
+    background: var(--lightpink);
+}
+.closing-banner{
+    background: var(--lightpink);
+    padding: 5em;
+
+}

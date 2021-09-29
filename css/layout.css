@@ -1,0 +1,45 @@
+@import "general.css";
+@import "header.css";
+@import "main.css";
+@import "home.css";
+@import "manifesto.css";
+@import "blog.css";
+@import "services.css";
+@import "events.css";
+
+@import "shop.css";
+@import "shop-mobile.css";
+
+@import "footer.css";
+@import "topic.css";
+
+@import "post.css";
+@import "post-mobile.css";
+
+@import "food.css";
+@import "dyk.css";
+/*************  grid  *******************/
+
+
+
+
+/********   preview    *****************/
+
+
+/* events main page */
+
+#events_main_page, #manifesto_main_page, #event_single_page, #service_main_page{
+    width: 100%;
+    grid-template-columns: repeat(10, 1fr);
+    /*grid-template-rows: repeat(6, auto);*/
+}
+
+/*************  blog single topic page  **************/
+
+#intro{
+    padding: 2em;
+}
+.narrow_center_content{
+    width:80%;
+    margin: 0 auto;
+}

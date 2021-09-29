@@ -1,0 +1,85 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27 Nov 2020, 23:13:58
+    Author     : ian
+*/
+body.single-post{
+    background: ;
+}
+#single-post.content-area{
+    width: 60%;
+    margin: 0 auto;
+}
+#single-post h1{
+    font-size: 2.2em;
+}
+#single-post h2{
+    text-align: center;
+}
+#post-body, .post-navigation{
+    width:80%;
+    margin: 0 auto;
+}
+#post-intro{
+
+}
+#dyk-paragraph{
+    border-left: 3px solid var(--darkpink);
+    width: 80%;
+    margin: 10% auto;
+    background: #f0f0f0;
+    padding: 2em;
+}
+#dyk-paragraph h2{ 
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+.post_title_h3{
+    text-align: left;
+}
+#post-body ul{
+    margin:2em;
+    padding-left:5em;
+    font-size: 1.4em;
+}
+#post-body li{
+    padding:0.3em;
+}
+#post-body .centered{
+    text-align: center;
+}
+#post-body .quotation{
+    margin:1.5em;
+    padding:1em;
+    background:var(--lightpink);
+}
+#dyk-paragraph p{
+    font-size: 1.4em;
+    margin-bottom: 0;
+}
+
+.post-section-image img{
+    width:100%;
+    height: auto;
+}
+.post-centered-p p{
+    text-align: center;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5em;
+    padding: 2em;
+    background-color: var(--brownygrey);
+
+    font-size: 1.2em;
+    font-weight: 900;
+}
+.nav-links a:hover{
+    color: var(--white);
+}

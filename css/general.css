@@ -1,0 +1,203 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10 Nov 2020, 13:42:24
+    Author     : ian
+*/
+
+
+/* GLOBAL VARIABLES */
+:root {
+    /* COLORS */
+    --pink: #e3cdc0;
+    --darkpink: #c6b3a5;
+    --lightpink:#f5f0ed;
+    --white: #ffffff;
+    --darkgrey:#454a4c;
+    --brownygrey:#777461;
+    --max-w: 1500px;
+    /*for mobile css  use*/
+}
+
+/***********    GENERAL STYLE SETTINGS   ********************/
+
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-family: century-gothic, sans-serif;
+        vertical-align: baseline;
+        background: transparent;
+        box-sizing: border-box;
+    }
+html{
+    color: #777461;
+    font-size: 10px; /* BASE FONT-SIZE = 1em */
+}
+p{
+    font-size: 1.3em;
+    text-align:justify;
+    margin-bottom:1.5em;
+    line-height: 1.8;
+}
+body{
+    margin: 0;
+    background: #e3cdc0;
+}
+a{
+    text-decoration: none;
+    color:var(--pink);
+}
+a.a-white{
+    text-decoration: none;
+    color:var(--white);
+}
+a:hover, a.a-white:hover{
+    color:var(--brownygrey);
+}
+
+/* default main grid */
+.def-main-grid{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    --row_start: 1;
+    --row_separation: 7;
+    --row_end: 11;
+    grid-auto-flow: dense;
+    /*border: 2px solid black;*/
+}
+.def-main-grid ul{
+    font-size: 1.5em; 
+    padding:1.5em;
+    list-style-position: inside;
+    width: -moz-fit-content;
+  width: fit-content;
+    margin: 0 auto;
+}
+.def-main-grid li{
+    
+}
+.def-main-grid > .fullrow{
+    grid-column-start: var(--row_start);
+    grid-column-end: var(--row_end);
+    background: var(--lightpink);
+
+    /*border: 1px solid red;*/
+}
+.def-main-grid > .fullrow p{
+    text-align: center;
+    /*border: 1px solid red;*/
+}
+.def-main-grid > .fullrow h2{
+    text-align: center;
+    /*border: 1px solid red;*/
+}
+.def-main-grid > .left{
+    grid-column-start: var(--row_start);
+    grid-column-end: var(--row_separation);
+    /*border: 1px solid blue;*/
+}
+.def-main-grid > .right{
+    grid-column-start: var(--row_separation);
+    grid-column-end: var(--row_end);
+    /*border: 2px solid green;*/
+}
+.exp-img-wrp{
+    overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+    /*align-self: center;  align image container vertically*/
+    height:100%;/*trick*/
+    /*border: 1px solid yellow;*/
+}
+.exp-img-wrp img{
+    width:100%;
+    height: 100%; /* fit image height to item-div height*/
+    object-fit: cover;/*crops the image width to fit the height*/
+    display:block;/*takes away space under image*/
+    opacity: 1;
+    transition-property: all;
+    transition-duration: 2s;
+}
+.def-main-grid > .text{
+    padding: 2vw;
+    overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+.def-main-grid > .right.exp-img-wrp > a{
+    position: relative;
+}
+
+/* buttons style*/
+.button_center{
+    width:100%;
+    text-align: center;
+}
+.button_right{
+    width:100%;
+    text-align: right;
+}
+.button, #wpforms-397 .button{
+    color: white;
+    font-size: 1.5em;
+    background: var(--pink);
+    margin:0.5em;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+.button:hover, #wpforms-397 .button:hover{
+    background: var(--brownygrey);
+    cursor: pointer;
+}
+.center_button{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+/*WOOCOMMERCE: TO BE PLACED IN A SEPARATE SHEET*/
+.product_prev_transparence_wrp{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: rgba(227,205,192,0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: 0.3s;
+}
+.product-inner-li:hover .product_prev_transparence_wrp{
+    left: 0;
+    transition: 0.3s;
+}
+.product_prev_transparence{
+    width: 100%;
+    height: 100%;
+}
+.product-inner-li{
+    position: relative;
+    overflow: hidden;
+    height: auto; 
+}
+.pageContent{
+    width: 80%;
+    margin: 0 auto;
+}
+figure{
+    text-align: center;
+}
+figure > img{
+    margin: 0;
+}
+.wp-block-image figcaption{
+    padding: 10px;
+    background-color: var(--lightpink);
+    margin: 0!important;
+}
+figcaption a{
+
+}

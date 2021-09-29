@@ -1,0 +1,14 @@
+/* 
+    Created on : 11 Nov 2020, 19:04:06
+    Author     : ian
+*/
+
+.preview{
+    display:inline-block;
+    justify-content: center;
+    margin-top: 10%;
+    width: 100%;
+}
+#manifesto.preview{
+    margin-top: 0;
+}

@@ -1,0 +1,110 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10 Nov 2020, 17:52:30
+    Author     : ian
+*/
+
+/********   MAIN   ***********************/
+main{
+    margin-top:100vh; /*height of current window(this hides the body to show the header banner and should work for all screens)*/
+    background: var(--white);
+}
+main#no-banner{
+    margin-top: 80px;
+    padding-top: 5px;
+}
+main#no-banner > section{
+    margin-top: 0;
+    padding-top: 120px;
+}
+#lang-select{
+   padding: 1em;
+   font-size: 1.5em;
+   text-align: right;
+}
+#lang-select a{
+    color: var(--darkpink);
+}
+
+.horizon-banner{
+    display:inline-block;
+    width: 100%;
+    margin-bottom: 2em;
+}
+.horizon-banner p{
+   text-align: center;
+   font-size: 1.5em;
+}
+
+/* Titles */
+main h1{
+    font-size: 3em;
+    margin: 1.5em 0;
+    text-align: center;
+}
+main h2{
+    font-size: 2em;
+    margin: 1.5em 0;
+    text-align: left;
+}
+main h3{
+    font-size: 1.8em;
+    margin: 1em 0;
+    text-align: center;
+}
+main h4{
+    font-size: 1.3em;
+    margin: 1em;
+}
+.page_content{
+    text-align: center;
+    width: 90%;
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+main .separator{
+   display: block;
+   height: 0.1em;
+   width: 10%; 
+   margin: 2em auto;
+   background: var(--darkpink);
+}
+a.topbutton {
+     line-height: 1;
+     position:fixed;
+     right:1em;
+     bottom:1em;
+     Z-index:10;
+     font-size: 4em;
+/*     background-image:url("http://example.com/wp-content/uploads/2015/01/topbutton.png");
+     background-repeat:no-repeat;*/
+     display:none;
+
+     border: 2px solid var(--pink);
+     border-radius: 50%;
+     background-color: var(--white);
+     color: var(--pink);
+
+}
+a.topbutton:hover{
+     line-height: 1;
+     position:fixed;
+     right:1em;
+     bottom:1em;
+     Z-index:10;
+     font-size: 4em;
+/*     background-image:url("http://example.com/wp-content/uploads/2015/01/topbutton.png");
+     background-repeat:no-repeat;*/
+     display:none;
+
+     border: 2px solid var(--brownygrey);
+     border-radius: 50%;
+     background-color: var(--white);
+     color: var(--brownygrey);
+
+}

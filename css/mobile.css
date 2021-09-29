@@ -1,0 +1,283 @@
+@media only screen and (max-width: 900px) {
+    :root{
+        --page_title_size: 17vw;
+    }
+@keyframes slow_apear_onwards{
+    0% {
+      transform: translateY(30%);
+      opacity: 0;
+      font-size:8vw;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+      font-size:var(--page_title_size);
+    }
+  }
+  @keyframes slow_expand{
+    0% {
+      border-top: 0px solid white;
+      width: 0%;
+      font-size: 0;
+    }
+    50% {
+      border-top: 0px solid white;
+      width: 0%;
+    }
+    100% {
+      border-top: 1px solid white;
+      width: 100%;
+      font-size: 20px;
+    }
+  }
+  
+  /*  HEADER  */
+  
+  #header-banner > h1{
+      font-size:var(--page_title_size);
+  }
+    /*  General  */
+    .closing-banner li{
+        margin-left:20em !important;
+    }
+    /*  Manifesto  */
+    #manifesto .def-main-grid{
+        --row_separation: 6;
+    }
+    .preview#manifesto .def-main-grid{
+        --row_separation: 6;
+    }
+    /*  Services  */
+    .preview #services-menu-grid{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 3em;/* dont use % here (it makes last row items to overflow on grids with 2 or more rows)*/
+        margin: 5% 0; /*avoid ite overflowing over previous and following blocks on hover effect of items*/
+    }
+    .preview .service{
+        height:35vw;
+    }
+    .service .title-wrp{
+        font-size: 1.6em;
+    }
+    .preview .service .title-wrp{
+        font-size: 1.6em;
+    }
+    
+@media only screen and (max-width: 500px) {
+
+   /*For mobile phones:*/ 
+
+
+/*  GENERAL  */
+p {
+    margin: 1em;
+}
+
+/* closing banner*/
+.closing-banner {
+    background: var(--lightpink);
+    padding: 5em 0em;
+}
+.closing-banner h1{
+    margin:0 !important;
+    font-size:2em !important;
+}
+.closing-banner h2{
+    margin:0 !important;
+    font-size:1.3em !important;
+}
+.closing-banner h3{
+    margin:0 !important;
+}
+.closing-banner li{
+    margin:3em !important;
+    font-size:1.3em !important;
+}
+
+/*  HEADER  */
+/******** header banner *********/
+#header-banner > h1{
+    font-size: var(--page_title_size);
+}
+
+/*  MAIN GRID  */
+.def-main-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+}
+.def-main-grid > .fullrow, .def-main-grid > .left, .def-main-grid > .right{
+    grid-column-start: var(--row_start);
+    grid-column-end: var(--row_end);
+    text-align: center;
+}
+#shop-intro-banner-text p{
+        text-align: center;
+}
+
+/* MAIN */
+main{
+    margin-top:63vh; /*height of current window(this hides the body to show the header banner and should work for all screens)*/    
+}
+main h1{
+    font-size: 2em;
+}
+main h2{
+    font-size: 1.5em;
+    text-align: center;
+}
+main .horizon-banner p {
+    font-size: 1.5em;
+}
+
+
+/* MANIFESTO MAIN PAGE */
+/* counter banner */
+#manifesto-countdown {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    margin-bottom: 1em;
+    flex-direction: column;
+    margin-bottom: 4em;
+}
+#manifesto-countdown > h1{
+    font-size: 2em!important;
+    text-align: center;
+}
+#manifesto-countdown > h1 > div{
+    font-size: 0.5em!important;
+}
+#countdown{
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+#countdown > *{
+    flex: 1 1 1em;
+}
+
+/*  SERVICES  */
+.preview #services-menu-grid, #services-menu-grid{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+ }
+ .preview .service, .service{
+        height:40vw;
+    }
+    .preview .service .title-wrp, .service .title-wrp{
+        font-size: 1em;
+    }
+
+/************  form  ******************/
+#wpforms-397{
+    width: 90%;
+    margin:0 auto;
+    padding: 4%;
+}
+
+/*  BLOG  */
+.preview #blog-menu-grid, #blog-menu-grid{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+ }
+
+/* SHOP */
+/*.grid ul {
+    margin-left: 2em;
+    text-align: justify;
+}
+.grid li {
+    margin-bottom: 1em;
+}*/
+
+   /*  shop  */
+/*   .collection-background {
+        width: 100%;
+        padding: 20em 0;
+    }
+     #collection-intro{
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 3;
+     }
+     .image-slider .background-image{
+            grid-column-start: 1;
+            grid-column-end: 11;
+            grid-row-start: 3;
+            grid-row-end: 5;
+            position:absolute;
+            overflow:hidden;
+*/            /*border:1px solid red;*/
+/*     }
+     .pics-buttons{
+            grid-column-start: 4;
+            grid-column-end: 11;
+            grid-row-start: 5;
+            grid-row-end: 5;
+            z-index:10;
+        }
+     .products{
+            grid-column-start: 3;
+            grid-column-end: 10;
+            grid-row-start:6;
+            grid-row-end: 11;
+            
+            grid-template-columns: 1fr;
+            width:90%;
+            margin:0 auto;
+            gap:3em;
+ */   }
+
+/*  LOGIN FORM  */
+.login-forms-page{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: min-content;
+    text-align: left;
+    margin:0;
+}
+.form {
+    margin: 2em;
+    padding: 0em 2em;
+    border: 0.1em solid lightgrey;
+    border-radius: 1%;
+}
+
+
+    /* FOOTER */
+    footer {
+        font-size: 1em;
+    }
+    /*  SOCIAL MEDIA MENU  */
+    #social-media-menu {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        padding: 6em 0;
+    }
+    /*********      QUOTATION SLIDER STYLE    **********************/
+#quotation-slider{
+    margin: 0 auto;
+    width: 90%;
+    height: 35em;
+    text-align: center;
+}
+#quotation-slider img{
+    border-radius: 100%;
+    width: 45%;
+    margin: 1em;
+}
+#quotation-slider .quotation{
+    background: var(--lightpink);
+    border-radius: 5px;
+    padding: 3%;
+    font-size: 1.5em;
+}
+#quotation-slider .author{
+    color: var(--darkpink);
+    font-size: 2em;
+}
+}
+

@@ -1,0 +1,155 @@
+
+.page_intro{
+    text-align: center;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+.page_intro h1{
+    margin: 1vw;
+    font-size: 1.2em;
+}
+.page_intro h2{
+    margin: 3vw 0;
+    font-size: 0.8em;
+}
+.page_intro p{
+    font-size: 0.9em;
+}
+
+
+
+
+/******            FORM Style       *********************/
+#wpforms-397, #wpforms-933{
+    width:40%;
+    max-width: 600px;
+    margin: auto;
+}
+label{
+    display:inline-block;
+    margin-top: 40px ;
+    font-size: 15px;
+}
+input[type=text], textarea, input[type=password]{
+    margin:0;
+    width: 100%;
+    padding: 5px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: white;
+    font-size: 15px;
+}
+
+.login-forms-page{
+    margin:4em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: min-content;
+    text-align: left;
+}
+.form{
+    margin: 3em;
+    padding: 2em 5em;
+    border: 0.1em solid lightgrey;
+    border-radius:1%;
+}
+.form h1{
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 0.5em;
+    margin-bottom:0;
+    font-size: 3em;
+    text-align: left;
+}
+.form label{
+    margin:1em;
+    margin-bottom:0.5em;
+    margin-top:1em;
+}
+.form.login{
+    
+}
+.form.register{
+    
+}
+
+/*/wooocommerce example style////////////////////////////////////////////////////////////
+
+
+html{
+    margin:0!important;
+}
+body
+{
+text-align: left;
+}
+#sidebar_right
+{
+border-left: 1px solid black;
+}
+.header-logo {
+    text-align: center;
+}
+.header-logo img {
+    height: 45px;
+}
+.jumbotron h1, .jumbotron .h1 {
+    font-size: 35px;
+    color: #aaa;
+    text-align: center;
+}
+
+.title
+{
+font-size: 11pt;
+font-family: verdana;
+font-weight: bold;
+}
+#main {
+    margin-bottom: 50px;
+}
+a {
+    color: #34393e;
+    text-decoration: none;
+}
+.woocommerce ul.products li.product .price {
+    color: #77a464;
+    display: block;
+    font-weight: 400;
+    margin-bottom: .5em;
+    font-size: 1.2em;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title{
+    font-size:1.5em;
+    }
+.woocommerce nav.woocommerce-pagination ul{
+    border:none;
+    }
+    .woocommerce .woocommerce-pagination ul.page-numbers li, .woocommerce-page .woocommerce-pagination ul.page-numbers li {
+    display: inline-block;
+    margin: 5px;
+}
+.woocommerce nav.woocommerce-pagination ul li span.current {
+    background: #337ab7;
+    color: #fff;
+    padding: 12px;
+}
+.woocommerce-pagination ul.page-numbers a.page-numbers {
+    color: #444;
+    padding: 12px;
+    margin: 0px;
+    background: #ddd;
+}
+#footer {
+    width: 100%;
+    border-top: 1px #a2a2a2 solid;
+    text-align: center;
+    padding: 40px;
+    background: #eee;
+}
+#footer h1 {
+    color: #aaa;
+    font-size: 30px;
+    font-weight: 500;
+}*/
